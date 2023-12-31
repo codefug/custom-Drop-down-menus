@@ -1,0 +1,31 @@
+:root{ /*이거 바꾸세요.*/
+    --menusize: 120px;
+    --menuItemHeight: 30px;
+}
+.dropDownMenu{
+    display:flex;
+    width:var(--menusize);
+    flex-direction: column;
+    align-items: center;
+}
+.dropDownItem{
+    display:none;
+    padding:0;
+    margin:0;
+    width: var(--menusize);
+    border:1px solid black;
+    box-sizing: border-box;
+    height:var(--menuItemHeight);
+}
+.menuButton{
+    width: var(--menusize);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: white;
+    padding:10px;
+    margin:0;
+}
+.dropDownItem:nth-last-child(1){
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
