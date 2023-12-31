@@ -9,13 +9,19 @@
     align-items: center;
 }
 .dropDownItem{
-    display:none;
+    display:block;
     padding:0;
+    border:none;
     margin:0;
-    width: var(--menusize);
-    border:1px solid black;
     box-sizing: border-box;
-    height:var(--menuItemHeight);
+    height: 0px;
+    width: var(--menusize);
+    transition: height 500ms cubic-bezier(0, 1.11, 0.61, 0.96);
+}
+.dropDownMenu:hover .dropDownItem{
+    display:block;
+    border: 1px solid black;
+    height: var(--menuItemHeight);
 }
 .menuButton{
     width: var(--menusize);
@@ -28,4 +34,7 @@
 .dropDownItem:nth-last-child(1){
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+.dropDownItemDescription{
+    margin:0;
 }
